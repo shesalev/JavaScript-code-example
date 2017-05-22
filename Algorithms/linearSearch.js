@@ -2,7 +2,7 @@
  * Linear search in array
  * @param  {array}  arr - Array
  * @param  {any}    x   - Value for search
- * @return {number}     - Array index of an element
+ * @return {number}     - Array index of an element or -1 if not found
  */
 export default (arr, x) => {
      let idx = -1;
