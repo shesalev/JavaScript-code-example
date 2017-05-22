@@ -1,4 +1,4 @@
-import linearSearch from "./linearSearch";
+import linearSearch from "../linearSearch";
 
 test('find 2 in arr [1,2,3]', () => {
   expect(linearSearch([1,2,3], 1)).toBe(0);
