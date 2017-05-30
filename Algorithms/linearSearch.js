@@ -1,20 +1,19 @@
+import chkNoUndefind from "./chkNoUndefind";
 /**
  * Linear search in array
- * @param  {array}  A - Array
- * @param  {any}    x - Value for search
- * @return {number}   - Array index of an element or -1 if not found
- */
-/**
  * Выполняет n итераций и n+1 проверку
  * Неэффективен. Процедура продолжает поиск в массиве даже после того, ка индекс i
  * i, для которого A[i]=x, уже найден.
+ * @param  {Object[]} A - Array
+ * @param  {any}      x - Value for search
+ * @return {number}     - Array index of an element or -1 if not found
  */
 export default (A, x) => {
      // set not found value
      let answer = -1;
 
      // check input variable
-     if ((A === void (0)) || (x === void (0))) {
+     if (!chkNoUndefind(A, x)) {
           return answer;
      }
 
