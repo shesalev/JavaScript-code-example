@@ -1,4 +1,4 @@
-import chkNoUndefind from "../chkNoUndefind";
+import chkNoUndefind from "../utils/chkNoUndefind";
 
 it('null argunents', () => {
   expect(chkNoUndefind()).toBe(false);

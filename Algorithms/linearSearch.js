@@ -1,4 +1,5 @@
-import chkNoUndefind from "./chkNoUndefind";
+"use strict";
+import chkNoUndefind from "./utils/chkNoUndefind";
 /**
  * Linear search in array
  * Выполняет n итераций и n+1 проверку
