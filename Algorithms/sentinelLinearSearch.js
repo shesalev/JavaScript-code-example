@@ -1,11 +1,13 @@
 "use strict";
 /** @module color/mixer */
-import chkNoUndefind from "./chkNoUndefind";
-/** Better linear search in array
+import chkNoUndefind from "./utils/chkNoUndefind";
+/** Sentine linear search in array
  * when x found then return
  * Выполняет <= n итераций и 1 проверку
  * Более эффективет. Процедура прекращает поиск в массиве,
- * как толко она находит индекс i, для которого A[i]=x.
+ * как толко она находит индекс i, для которого A[i]=x. 
+ * Отличается тем, что время выполнения одной итерации меньше, чем 
+ * время выполнения одной итерации в Better linear search
  * @param  {Object[]} A - Array
  * @param  {any}      x - Value for search
  * @return {number}     - Array index of an element or -1 if not found
