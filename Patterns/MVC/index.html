@@ -1,0 +1,29 @@
+<html>
+
+<head>
+     <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ="
+          crossorigin="anonymous"></script>
+
+     <!-- Using function returning an Object literal (my preference) -->
+     <script type="text/javascript" src="js/models/FormModel_literal.js"></script>
+     <script type="text/javascript" src="js/controllers/FormController_literal.js"></script>
+
+     <!-- Using Prototype -->
+     <!--<script type="text/javascript" src="js/controllers/FormController_prototype.js" ></script>-->
+     <!--<script type="text/javascript" src="js/models/FormModel_prototype.js"></script>-->
+
+     <script type="text/javascript">
+          $(document).ready(function () {
+               new FormController().init();
+          });
+     </script>
+
+</head>
+
+<body>
+     <input type="text" id="inputtext" name="inputtext" value="" />
+     <input type="button" id="fillbutton" value="Fill with Text" />
+     <input type="button" id="clearbutton" value="Clear" />
+</body>
+
+</html>
