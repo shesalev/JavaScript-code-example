@@ -2,8 +2,8 @@
  * The Model. Model stores items and notifies
  * observers about changes.
  */
-function ListModel(items) {  
-    this._items = items;
+function ListModel(items) {
+    this._items = (items) ? items : [];
     this._selectedIndex = -1;
 
     this.itemAdded = new Event(this);
@@ -11,36 +11,42 @@ function ListModel(items) {
     this.selectedIndexChanged = new Event(this);
 }
 
-ListModel.prototype = {  
-    getItems : function () {
+ListModel.prototype = {
+    getItems: function () {
         return [].concat(this._items);
     },
 
-    addItem : function (item) {
+    addItem: function (item) {
         this._items.push(item);
-        this.itemAdded.notify({ item : item });
+        this.itemAdded.notify({
+            item: item
+        });
     },
 
-    removeItemAt : function (index) {
+    removeItemAt: function (index) {
         var item;
 
         item = this._items[index];
         this._items.splice(index, 1);
-        this.itemRemoved.notify({ item : item });
+        this.itemRemoved.notify({
+            item: item
+        });
         if (index === this._selectedIndex) {
             this.setSelectedIndex(-1);
         }
     },
 
-    getSelectedIndex : function () {
+    getSelectedIndex: function () {
         return this._selectedIndex;
     },
 
-    setSelectedIndex : function (index) {
+    setSelectedIndex: function (index) {
         var previousIndex;
 
         previousIndex = this._selectedIndex;
         this._selectedIndex = index;
-        this.selectedIndexChanged.notify({ previous : previousIndex });
+        this.selectedIndexChanged.notify({
+            previous: previousIndex
+        });
     }
 };
